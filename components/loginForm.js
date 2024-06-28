@@ -1,9 +1,9 @@
 import React, { useContext, useState } from 'react';
 import axios from 'axios';
-import { UserContext } from './UserContext';
+import { UserContext } from './context';
 
 const LoginForm = () => {
-  const { setUser } = useContext(UserContext);
+  const { setUser } = useContext(context);
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
