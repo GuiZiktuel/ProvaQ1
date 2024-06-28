@@ -20,15 +20,3 @@ fastify.post('/noticias', async (request, reply) => {
     }
 });
 
-
-fastify.post('/noticias', async (request, reply) => {
-    try {
-        const noticias = request.body; 
-        console.log('Notícias recebidas:', noticias);
-        reply.code(200).send({ message: 'Notícias recebidas com sucesso!' });
-    } catch (error) {
-        console.error('Erro ao processar notícias:', error);
-        reply.code(500).send({ error: 'Erro ao processar notícias' });
-    }
-});
-
